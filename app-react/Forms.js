@@ -7,10 +7,12 @@ class Forms extends Component {
         this.state = {
             value: '',
             isSelected: true,
-            title: 'My First Form Reatc JS'
+            title: 'My First Form Reatc JS',
+            companyName: ''
         };
         this.submitForm = this.submitForm.bind(this);
         this.onChangeValue = this.onChangeValue.bind(this);
+        this.compagnyText = this.compagnyText.bind(this);
     }
 
     submitForm (event) {
@@ -24,18 +26,19 @@ class Forms extends Component {
         this.setState({[name]: value});
     }
 
+    compagnyText(event) {
+        this.setState({
+            companyName: event.target.value
+        });
+    }
+
     render() {
         return (
-            <form onSubmit={this.submitForm}>
-                <h1>{this.state.title}</h1>
-                <label>Name: </label>
-                <input type="text" value={this.state.value} onChange={this.onChangeValue} />
-                <br/>
-                <label>Passed examen ? </label>
-                <input type="checkbox" checked={this.state.isSelected} onChange={this.onChangeValue} />
-                <br/>
-                <input type="submit" value="Submit Form" />
-            </form>
+            <div>
+                <label htmlFor="name">Enter you companyName Name: </label>
+                <input type="text" id="companyName" onChange={this.compagnyText} />
+                <h4>You are enter: {this.state.companyName}</h4>
+            </div>
         );
     }
 }
