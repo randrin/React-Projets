@@ -23,13 +23,13 @@ class App extends Component {
         {this.state.displayBlog ? (
           <div>
             <p>You you like to start the tutorial now?</p>
-            <button onClick={this.toggleDisplayBlog}>Start Now</button>
+            <button className="btn btn-primary" onClick={this.toggleDisplayBlog}>Start Now</button>
           </div>
         ) : (
           <div>
             <h4 style={mystyle}>Welcome to the basis ReactJS</h4>
             <Components component={this.state.name} />
-            <button onClick={this.toggleDisplayBlog}>End Tutorial</button>
+            <button className="btn btn-primary" onClick={this.toggleDisplayBlog}>End Tutorial</button>
           </div>
         )}
       </div>

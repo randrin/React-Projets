@@ -10,13 +10,13 @@ function Message (props) {
 
 function Login (props) {
     return (
-        <button onClick={props.checkInfo}>LOgin</button>
+        <button className="btn btn-success" onClick={props.checkInfo}>Login</button>
     )
 }
 
 function Logout (props) {
     return (
-        <button onClick={props.checkInfo}>Logout</button>
+        <button className="btn btn-danger" onClick={props.checkInfo}>Logout</button>
     )
 }
 
