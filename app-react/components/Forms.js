@@ -36,7 +36,7 @@ class Forms extends Component {
         return (
             <div>
                 <label htmlFor="name">Enter you companyName Name: </label>
-                <input type="text" id="companyName" onChange={this.compagnyText} />
+                <input className="form-control" type="text" id="companyName" onChange={this.compagnyText} />
                 <h4>You are enter: {this.state.companyName}</h4>
             </div>
         );
