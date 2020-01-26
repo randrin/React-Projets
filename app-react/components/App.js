@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Components from "./Components";
+import styled from 'styled-components';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -12,25 +14,39 @@ class App extends Component {
     this.setState({ displayBlog: !this.state.displayBlog });
   }
   render() {
-    const mystyle = {
-      color: "red",
-      padding: "10px",
-      fontFamily: "Arial"
-    };
+    const Div = styled.div`  
+            margin: 20px;  
+            border: 5px dashed green;  
+            &:hover {  
+            background-color: ${(props) => props.hoverColor};  
+            }  
+            `;
+    const Title = styled.h1`  
+            font-family: Arial;  
+            font-size: 35px;  
+            text-align: center;  
+            color: palevioletred;  
+            `;
+    const Paragraph = styled.p`  
+            font-size: 25px;  
+            text-align: center;  
+            background-Color: lightgreen;  
+            `;
+
     return (
       <div>
-        <h1>Welcome {this.state.name}</h1>
+        <Title>Welcome {this.state.name}</Title>
         {this.state.displayBlog ? (
-          <div>
-            <p>You you like to start the tutorial now?</p>
+          <Div hoverColor="Orange">
+            <Paragraph>You you like to start the tutorial now?</Paragraph>
             <button className="btn btn-primary" onClick={this.toggleDisplayBlog}>Start Now</button>
-          </div>
+          </Div>
         ) : (
-          <div>
-            <h4 style={mystyle}>Welcome to the basis ReactJS</h4>
+          <Div hoverColor="Orange">
+            <h4>Welcome to the basis ReactJS</h4>
             <Components component={this.state.name} />
             <button className="btn btn-primary" onClick={this.toggleDisplayBlog}>End Tutorial</button>
-          </div>
+          </Div>
         )}
       </div>
     );
