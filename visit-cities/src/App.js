@@ -1,9 +1,14 @@
 import React from 'react';
 import './App.scss';
+import Navbar from './components/navbar/navbar';
+import CityList from './components/cityList/cityList';
 
 function App() {
   return (
-    <h2>Visit City Tour</h2>
+    <React.Fragment>
+      <Navbar />
+      <CityList />
+    </React.Fragment>
   );
 }
 
