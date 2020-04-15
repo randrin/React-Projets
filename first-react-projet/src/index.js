@@ -6,12 +6,13 @@ import Garage from './Garage';
 import Car from './Car';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import ThemeSwitcher from "./ThemeSwitcher";
 
 ReactDOM.render(<App />, document.getElementById('root'));
 const myelement = <Car brand="BMW" />;
 ReactDOM.render(myelement, document.getElementById('car'));
 ReactDOM.render(<Garage />, document.getElementById("garage"));
-
+ReactDOM.render(<ThemeSwitcher />, document.getElementById("bootstrap"));
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
