@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Colors
+$city-color-white: #ffffff;
+$city-colot-red: #d12420;
+$city-color-gray: #63666a;
+$city-color-white-gray: #e8e8e8;
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: $city-color-white-gray;
+  color: $city-color-gray;
+}
