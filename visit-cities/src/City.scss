@@ -6,10 +6,13 @@
 
 // Colors
 $city-color-white: #ffffff;
-$city-colot-red: #d12420;
+$city-color-red: #d12420;
 $city-color-gray: #63666a;
 $city-color-white-gray: #e8e8e8;
 $city-color-black: #000;
+
+// Transition
+$city-event-transition: all 0.3s linear;
 
 body {
   font-family: 'Open Sans', sans-serif;
