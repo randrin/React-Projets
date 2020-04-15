@@ -12,7 +12,8 @@ export default class CityList extends Component {
   }
 
   removeCity = (id) => {
-    console.log("city id: ", id);
+    const sortedCities = this.state.cities.filter((city) => id != city.id);
+    this.setState({ cities: sortedCities });
   };
   render() {
     const { cities } = this.state;
