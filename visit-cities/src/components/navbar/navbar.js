@@ -6,7 +6,7 @@ export default function Navbar() {
       <nav className="navbar navbar-default navbar-doublerow navbar-trans navbar-fixed-top">
         {/* top nav */}
         <nav className="navbar navbar-top hidden-xs">
-          <div className="container">
+          <div className="container navbar-city-container">
             {/* left nav top */}
             <ul className="nav navbar-nav pull-left">
               <li>
@@ -46,11 +46,10 @@ export default function Navbar() {
               </li>
             </ul>
           </div>
-          <div className="dividline light-grey"></div>
         </nav>
         {/* down nav */}
         <nav className="navbar navbar-down">
-          <div className="container">
+          <div className="container  navbar-city-container">
             <div className="flex-container">
               <div className="navbar-header flex-item">
                 <div

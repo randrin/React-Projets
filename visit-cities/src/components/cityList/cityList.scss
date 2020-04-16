@@ -1,0 +1,12 @@
+@import '../../City.scss';
+
+.no-city {
+    display: grid;
+}
+.no-city-icon {
+    font-size: 15rem;
+    color: $city-color-red;
+}
+.no-city-text {
+    margin: 20px 0px;
+}

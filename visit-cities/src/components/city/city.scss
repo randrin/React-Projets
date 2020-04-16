@@ -12,10 +12,6 @@
     margin-left: -15px;
 }
 
-.img-city:hover .img-city-remove {
-    opacity: 1;
-}
-
 .city-city {
     color: $city-color-red;
     text-transform: uppercase;
@@ -57,4 +53,7 @@
 .img-container:hover .img-city-remove {
     display: block;
     transition: $city-event-transition;
+}
+.img-container:hover {
+    transition: scale(1.05);
 }

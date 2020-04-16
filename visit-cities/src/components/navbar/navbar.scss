@@ -1,5 +1,8 @@
 @import '../../City.scss';
 
+.navbar-city-container {
+    padding: 10px 0;
+}
 .navbar-default {
     top: 0;
     position: relative;
@@ -19,6 +22,10 @@
     margin: 0px auto;
     min-height: 25px;
     background-color: $city-color-black;
+}
+
+.navbar-doublerow>.navbar-down {
+    background-image: $city-gradient-red;
 }
 
 .navbar-doublerow .nav {
@@ -90,4 +97,10 @@
 .light-grey {
     color: #000 !important;
     background-color: #E6E9ED !important
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        border-radius: 0;
+    }
 }
