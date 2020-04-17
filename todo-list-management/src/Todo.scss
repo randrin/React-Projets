@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Colors
+$todo-color-white: #ffffff;
+$todo-color-red: #d12420;
+$todo-color-gray: #63666a;
+$todo-color-white-gray: #e8e8e8;
+$todo-color-black: #000;
+
+// Gradients
+$todo-gradient-red: linear-gradient(to right, #e10f21, #930d18);
+
+// Transitions
+$todo-event-transition: all 0.3s linear;
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: $todo-color-white-gray;
+    color: $todo-color-gray;
+}
+
+// Scrollbar
+::-webkit-scrollbar-thumb {
+    background-color: $todo-color-gray;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
