@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.scss";
 import TodoList from "./components/TodoList";
 import TodoInput from "./components/TodoInput";
-import {v4 as uuid} from "uuid";
+import { v4 as uuid } from "uuid";
 
 export class App extends Component {
   state = {
@@ -13,25 +13,52 @@ export class App extends Component {
     editItem: false,
   };
 
-  handleChangeItem = (id) => {
-    console.log("handleChangeItem");
+  handleChangeItem = (e) => {
+    this.setState({ item: e.target.value });
   };
 
   handleEditItem = (id) => {
-    console.log("handleEditItem");
+    const updateItems = this.state.items.filter(item => item.id !== id);
+    const editItem = this.state.items.find(item => id === item.id);
+    this.setState({
+      items: updateItems,
+      item: editItem.title,
+      editItem: true,
+      id: id,
+    });
   };
 
-  handleSubmitItem = (id) => {
-    console.log("handleSubmitItem");
+  handleSubmitItem = (e) => {
+    e.preventDefault();
+    const newItem = {
+      title: this.state.item,
+      id: this.state.id,
+    };
+    const updateItems = [...this.state.items, newItem];
+    this.setState(
+      {
+        items: updateItems,
+        item: "",
+        title: "",
+        id: uuid(),
+        editItem: false,
+      }
+    );
   };
 
-  handleClearItems = (id) => {
-    console.log("handleClearItems");
+  handleClearItems = () => {
+    this.setState({
+      items: [],
+    });
   };
 
   handleDeleteItem = (id) => {
-    console.log("handleDeleteItem");
+    const updateItems = this.state.items.filter((item) => item.id !== id);
+    this.setState({
+      items: updateItems,
+    });
   };
+
   render() {
     return (
       <div className="App">

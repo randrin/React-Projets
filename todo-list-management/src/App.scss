@@ -1,3 +1,5 @@
+@import './Todo.scss';
+
 .App {
   text-align: center;
 }
@@ -32,7 +34,19 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.item-actions span {
+  font-size: 25px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.item-title {
+  color: $todo-color-gray;
+  font-size: 18px;
 }
