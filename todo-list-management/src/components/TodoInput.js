@@ -5,7 +5,7 @@ export default class TodoInput extends Component {
     const { item, handleChangeItem, handleSubmitItem, editItem } = this.props;
     return (
       <form onSubmit={handleSubmitItem}>
-        <div className="container">
+        <div className="container my-4">
           <div className="row">
             <div className="col-md-10">
               <input
@@ -17,14 +17,14 @@ export default class TodoInput extends Component {
               />
             </div>
           </div>
-          <div className="row">
+          <div className="row mt-2">
             <div className="col-md-10">
               <button
                 type="submit"
                 disabled={item ? false : true}
-                 className="btn btn-block btn-primary"
+                className="btn btn-block btn-primary"
               >
-                <i className="fa fa-check"></i>{" "}
+                <i className="fa fa-check"></i>
                 {editItem ? "Edit Item" : "Add Item"}
               </button>
             </div>

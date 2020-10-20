@@ -32,3 +32,8 @@ body {
 ::-webkit-scrollbar {
     width: 10px;
 }
+
+.todo-list-empty-items {
+    color: $todo-color-red;
+    font-size: 100px;
+}
