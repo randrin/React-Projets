@@ -24,7 +24,7 @@ export default class TodoList extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-md-10">
+          <div className="col-md-8 offset-md-2">
             <ul className="list-group my-5">
               {items.length === 0 ? (
                 <TodoEmptyList />

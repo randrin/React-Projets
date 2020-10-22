@@ -67,7 +67,7 @@ export class App extends Component {
       <div className="App my-5">
         <div className="container">
           <div className="row">
-            <div className="col-md-10">
+            <div className="col-md-8 offset-md-2">
               <h1>Todo List Management</h1>
             </div>
           </div>

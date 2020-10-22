@@ -8,10 +8,10 @@ export default class TodoItem extends Component {
         <li className="list-group-item text-capitalize d-flex justify-content-between my-2">
           <div className="container">
             <div className="row">
-              <div className="col-md-10 text-left">
+              <div className="col-md-9 text-left">
                 <span className="item-title">{title}</span>
               </div>
-              <div className="col-md-2 text-right">
+              <div className="col-md-3 text-right">
                 <div className="item-actions">
                   <span className="mx-2 text-success" onClick={handleEditItem}>
                     <i className="fa fa-pencil"></i>

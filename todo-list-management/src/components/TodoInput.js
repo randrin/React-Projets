@@ -7,7 +7,7 @@ export default class TodoInput extends Component {
       <form onSubmit={handleSubmitItem}>
         <div className="container my-4">
           <div className="row">
-            <div className="col-md-10">
+            <div className="col-md-8 offset-md-2">
               <input
                 type="text"
                 onChange={handleChangeItem}
@@ -18,7 +18,7 @@ export default class TodoInput extends Component {
             </div>
           </div>
           <div className="row mt-2">
-            <div className="col-md-10">
+            <div className="col-md-8 offset-md-2">
               <button
                 type="submit"
                 disabled={item ? false : true}
