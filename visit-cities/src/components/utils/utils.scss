@@ -1,0 +1,13 @@
+.empty-wrapper {
+    top: 100px;
+    position: relative;
+
+    .empty-city {
+        .empty-city-icon,
+        .empty-city-text,
+        .empty-city-cta {
+            margin: 20px 0;
+        }
+    }
+
+}
